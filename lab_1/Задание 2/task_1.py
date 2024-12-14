@@ -2,6 +2,7 @@ from typing import Union
 
 
 class Сharacter:
+    
     def __init__(self, name: str, age: int, strength: Union[int, float]):
         """
         Создание и подготовка к работе объекта "Персонаж"
@@ -24,6 +25,7 @@ class Сharacter:
             raise TypeError("Сила персонажа должна быть выражена числом")
         self.strength = strength
 
+
     def is_child(self) -> bool:
         """
         Функция проверяет является ли персонаж ребенком
@@ -40,6 +42,7 @@ class Сharacter:
         else:
             return False
 
+    
     def years_passed(self, count: int) -> None:
         """
         :param count: количество прошедших лет
