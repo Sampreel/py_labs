@@ -4,8 +4,6 @@ from typing import Union
 if __name__ == "__main__":
     import doctest
 
-    doctest.testmod()
-
 
 class Сharacter:
 
@@ -49,8 +47,8 @@ class Сharacter:
 
     def years_passed(self, count: int) -> None:
         """
-       :param count: количество прошедших лет
-       :raise: Сколько лет стало персонажу через это количество лет
+       :param count: количество прошедших лет с обозначеного ранее года
+       :raise: Сколько лет стало персонажу через это количество лет, как он повзрослел
 
        Пример:
        >>> character_1 = Сharacter("Mel", 33, 100)
@@ -88,7 +86,7 @@ class Wizard:
     def is_hit(self, impact: int) -> None:
         """
         :param impact: наносимый урон
-        :return: значение здоровья после удара, с учетом брони
+        :reise: значение здоровья после удара, с учетом брони
 
         Пример:
         >>> wizard_1 = Wizard(100, 15)
@@ -162,7 +160,7 @@ class Ghost:
         """
         улучшение
         :param add: добавка к рангу
-        :return: ранг
+        :raise: ранг
 
         >>> ghost_1 = Ghost("Earth", 15)
         >>> ghost_1.is_boosted(5)
@@ -173,3 +171,6 @@ class Ghost:
         if (0 > add) and (add + self.rang >= 100):
             raise ValueError("Значение ранга находится в промежутке от 1 до 100 единиц")
         self.rang += add
+
+if __name__ == "__main__":
+    doctest.testmod()
