@@ -43,7 +43,7 @@ class Pine(Evergreen):
         height (int, float): Высота дерева
     """
 
-    def __init__(self, crown: str, cone: str, tone: str, height: (int, float)):
+    def __init__(self, crown: str, cone: str, tone: str, height: int | float):
         super().__init__(crown, cone, tone)
         self.height = height
 
@@ -52,7 +52,7 @@ class Pine(Evergreen):
         return self._height
 
     @height.setter
-    def height(self, value: (int, float)):
+    def height(self, value: int | float):
         if not isinstance(value, (int, float)):
             raise TypeError('Высота дерева должна быть целым или вещественным числом')
         if value <= 0:
@@ -88,3 +88,4 @@ class Pine(Evergreen):
              str: Строка, обозначающее внешний вид дерева
         """
         return "Дерево укашено"
+        
