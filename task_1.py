@@ -13,7 +13,7 @@ BOOKS_DATABASE = [
 
 
 class Book:
-    def __init__(self, id_, name: str, pages: int):
+    def __init__(self, id_: int, name: str, pages: int):
         self.id = id_
         self.name = name
         self.pages = pages
