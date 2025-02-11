@@ -37,8 +37,8 @@ class PaperBook(Book):
             raise ValueError
         self._pages = value
 
-    def __str__(self):
-        return f"Книга: {self.name}. Автор: {self.author}. Страниц: {self.pages}"
+    def __repr__(self):
+         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, pages={self.pages!r})"
 
 
 class AudioBook(Book):
@@ -58,6 +58,6 @@ class AudioBook(Book):
             raise ValueError
         self._duration = value
 
-    def __str__(self):
-        return f"Книга: {self.name}. Автор: {self.author}. Продолжительность: {self.duration:.2f} ч"
+    def __repr__(self):
+         return f"{self.__class__.__name__}(name={self.name!r}, author={self.author!r}, duration={self.duration!r})"
 
